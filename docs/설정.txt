@@ -1,7 +1,7 @@
 employee db 설치하기
 
 1. DB 및 계정만들기 (Workbench에서 DBA로 접속)
-create database employees;			 	                       # 계정생성
+create database employees;			 	                         # 계정생성
 create user 'employees'@'localhost' identified by 'employees';   # 계정생성
 grant all privileges on employees.* to employees'@'localhost';   # 권한부여
 flush privileges;
