@@ -47,3 +47,18 @@ where to_date = '9999-01-01'
 group by emp_no -- group by는 select에서 쓴 변수만 쓸 수 있음
 having avg(salary) > 35000 -- where 다음에 and로 하면 안됨
 order by avg(salary) desc;
+
+-- 예제7
+-- 사원별로 몇 번의 직책 변경이 있었는지 조회해 보세요.
+select emp_no, count(*)
+from titles
+group by emp_no;
+
+-- 예제8
+-- 현재 직책별로 직원 수를 구하되 직원 수가 100명 이상인 직책만 출력하세요.
+  select title, count(*) as cnt
+    from titles
+   where to_date = '9999-01-01'
+group by title
+  having cnt >= 100
+order by cnt desc;
