@@ -17,6 +17,9 @@ try:
     sql = 'insert into emaillist values(null, "마", "이콜", "michol@naver.com")'
     count = cursor.execute(sql)
 
+    # commit
+    db.commit()
+
     # 자원 정리
     cursor.close()
     db.close()
